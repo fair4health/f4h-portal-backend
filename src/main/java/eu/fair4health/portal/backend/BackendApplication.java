@@ -1,13 +1,13 @@
-package eu.fair4health.f4hportalbackend;
+package eu.fair4health.portal.backend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class F4hPortalBackendApplication {
+public class BackendApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(F4hPortalBackendApplication.class, args);
+		SpringApplication.run(BackendApplication.class, args);
 	}
 
 }
