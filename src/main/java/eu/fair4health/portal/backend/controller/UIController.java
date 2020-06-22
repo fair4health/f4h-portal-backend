@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class UIController {
-	
-	@RequestMapping(value = "/sample", method = RequestMethod.POST)
+
+    @RequestMapping(value = "/sample", method = RequestMethod.POST)
     public String sampleMessage() {
         return "{\"message\":\" sample content\"}";
     }
