@@ -1,0 +1,14 @@
+package eu.fair4health.portal.backend.controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class UIController {
+	
+	@RequestMapping(value = "/sample", method = RequestMethod.POST)
+    public String sampleMessage() {
+        return "{\"message\":\" sample content\"}";
+    }
+}
