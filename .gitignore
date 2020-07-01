@@ -29,6 +29,7 @@ target/
 !**/src/test/**
 
 ### STS ###
+/.okhttpcache/
 .apt_generated
 .classpath
 .factorypath
@@ -53,4 +54,9 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Maven ###
+.mvn/
+mvnw
+mvnw.cmd
 
