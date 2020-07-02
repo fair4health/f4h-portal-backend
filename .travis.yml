@@ -24,6 +24,7 @@ sudo: false
 cache:
   directories:
     - "$HOME/.m2"
+    - "$HOME/.sonar/cache"
 
 env:
   global:
@@ -41,7 +42,8 @@ addons:
     organization: "fair4health"
     token:
       secure: Vznn9955w3roNz0F8PSN3Mydrph99ONXh1sf/sWITA9vFDe+X2IXp+EFPUAoHqodpbAt7D2cULmM6dkIS7hRRnqhO1jE98yGxyIBgnV18b3k/+R0DrTD+ckowDPHHuGzBF5UxOFoPDAa9e9905dA80PxeWZ7w5heb++XEWUasspFnbXOJ2JCjjmrV1CA4tiwr8wLsliTZ1j5JBWP+06BT4cFKdsOsRphfu5PMmxeO0ETnYLBPFP8i1O4vPVc+jBP47dCPNk9lAwrf53r5ebwTBzPsqLlppxw/t+4eJ/ifxOWn1jb33DUdgsu6iq2ksVQwcsigVg60EwipGTokOeuscYmUqOXEOLTagN94KHGytCCUQIN9rtmzus8v2BXHuf3bUMpCNdeM2jTDiwk2SAxvspefsefP4b8cAPmcvj/BIdl13PcQTBlQVn93XeZfp2cexngjaxjO7F3zPRfupc4o/j9QSmuORc50390eZTlXQHKs+pTrfWBoQDSTTz6SJuz/RzR6Zahhq2JimUYBQ4rrSOzwfvQyB+a1NFFx1SnpJkH2wV9DwoQnbrPdOGLRYUPSPFFG3FIJEPkUQ0phhzvtmiiM0zxBoV24JZ+0WQHhVvAdL9X+jL5HLyKhBIKY5dK+KSOmo2FbboHeWZtKm1PrbaqVFWwycSa+/rXwY66PwY=
-      
+    branches:
+      - master      
 script:
   - if [ "$TRAVIS_PULL_REQUEST" = "true" ]; then mvn clean test; mvn package -Dmaven.test.skip=true; mvn sonar:sonar; fi
   - if [ "$TRAVIS_BRANCH" = "master" ]; then mvn clean test; mvn sonar:sonar; fi
