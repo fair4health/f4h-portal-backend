@@ -35,7 +35,7 @@
     </properties>
 
     <scm>
-        <url>https://github.com/AriHealth/spring-boot-template.git</url>
+        <url>https://github.com/fair4health/spring-boot-template.git</url>
         <connection>scm:git:https://github.com/fair4health/f4h-portal-backend.git</connection>
         <developerConnection>scm:git:https://github.com/fair4health/f4h-portal-backend.git</developerConnection>
         <tag>HEAD</tag>
